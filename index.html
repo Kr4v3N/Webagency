@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta name="viewport" content="width=device-width">
+    <meta charset="UTF-8">
+    <!-- Commentaire conditionnel -->
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><!
+    [endif]-->
+    <!--Je definis comme largeur de "viewport" la largeur du materiel utilisé pour visualiser la page web et je m'assure qu'aucun zoom ne serra fait à l'affichage de la page -->
+    <!--lien vers les pages css -->
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="fonts/font_awesome.css"/>
+    <link rel="stylesheet" href="style-responsive.css"/>
+    <title>WebAgency</title>
+
+    <!-- Métadonnées de la page web pour améliorer le réferencement -->
+
+    <!-- Protocole Open Graph ( C'est un ensemble de balises qui permet à un webmaster de donner aux principaux réseaux sociaux (Facebook, Google +, Twitter, LinkedIn...) des informations précises sur ses pages. ) -->
+        <!-- C'est le titre de ma page pour l'Open Graph  -->
+        <meta property="og:title" content="WebAgency"/>
+        <!-- C'est le type de ma page (website)  -->
+        <meta property="og:type" content="website"/>
+        <!-- C'est l'URL de référence, de ma page  -->
+        <meta property="og:url" content="http://www.monsite.net/"/>
+        <!-- C'est l'URL de l'image qui représente votre page dans l'Open Graph  -->
+        <meta property="og:image" content="http://www.mon site.net/images/meta/child-painting.jpg"/>
+        <!-- C'est une description courte de ma page  -->
+        <meta property="og:description" content="WEBAGENCY : L'Agence de tous vos projets"/>
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary"/>
+        <meta name="twitter:site" content="@webagency"/>
+        <meta name="twitter:title" content="WebAgency"/>
+        <meta name="twitter:description" content="WEBAGENCY:L'Agence de tous vos projets"/>
+        <meta name="twitter:image" content="http://www.monsite.net/images/meta/child_megaphone.jpg"/>
+
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+            <div class="top-bar">
+                <a href="#home"><img src="images/logo.png" alt="logo webAgency"/></a>
+                <div class="nav">
+                    <label class="label" for="toggle">&#9776;</label>
+                    <input type="checkbox" id="toggle"/>
+                    <nav class="menu">
+                        <ul>
+                            <li><a href="#home">Accueil</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="slider" id="home">
+                <div id="slide-1">
+                    <div id="slide-2">
+                        <img src="images/slider/enfants.jpg" alt="" class="image-slide">
+                    </div>
+                </div>
+                <div class="slide-contents">
+                    <!-- La flèche gauche -->
+                   <a href="#slide-1" class="left-slide-arrow"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+                    <div class="slide-text">
+                    <h1><span class="color-blue">WEBAGENCY</span> : L'AGENCE DE TOUS VOS PROJETS</h1>
+                        <p>Vous avez un projet web ? La webAgency vous aide à le réaliser !</p>
+                        <a href="#contact" class="slide-button">Plus d'infos</a>
+                    </div>
+                    <!-- La flèche droite -->
+                  <a href="#slide-2" class="right-slide-arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+    </header>
+    <!-- NOS SERVICES -->
+    <section class="services-section" id="services">
+
+            <div class="introduction">
+                <h2>NOS SERVICES</h2>
+                <div class="border-title">
+                    <div class="border-feature"></div>
+                    <div class="border-circle"><i class="fa fa-circle" aria-hidden="true"></i></div>
+                    <div class="border-feature"></div>
+                </div>
+
+                <div class="text-intro">
+                    <p>Etre présent sur internet est devenu incontournable, mais par où commencer ? WebAgency vous accompagne de A à Z dans vos projets avec des solutions clés en main.
+                    </p>
+                </div>
+            </div>
+            <div class="services-contents">
+                <div class="services-image">
+                    <img src="images/main-feature.png" alt="micro Apple"/>
+                </div>
+                <div class="services-descriptive">
+                    <div class="services-category">
+                        <div class="services-icons"><i class="fa fa-line-chart" aria-hidden="true"></i></div>
+                        <div class="services-circle"><i class="fa fa-circle" aria-hidden="true"></i></div>
+                        <div class="services-text">
+                            <h3><em>UX design</em></h3>
+                            <p>
+                                Notre travail est centré sur l'utilisateur et son univers. Votre projet sera construit autour du Responsive Web Design pour le rendre plus accessible, plus ergonomique et être présent sur tous les supports Web.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="services-category">
+                        <div class="services-icons"><i class="fa fa-cubes" aria-hidden="true"></i></div>
+                        <div class="services-circle"><i class="fa fa-circle" aria-hidden="true"></i></div>
+                        <div class="services-text">
+                            <h3><em>UI design</em></h3>
+                            <p>
+                                 L’UI design permet d’améliorer l’interaction d’un utilisateur avec un produit. Cette réflexion doit être menée pour toutes les étapes de l’utilisation produit, la première d’entre elles étant d’attirer le client. Le designer d’interaction doit alors déterminer quels outils mettre en place pour favoriser l’engagement.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="services-category">
+                        <div class="services-icons"><i class="fa fa-pie-chart" aria-hidden="true"></i></div>
+                        <div class="services-circle"><i class="fa fa-circle" aria-hidden="true"></i></div>
+                        <div class="services-text">
+                            <h3><em>SEO</em></h3>
+                            <p>
+                                Nous travaillons sur un référentiel optimisé afin de rendre votre projet incontournable et toujours plus populaire sur le Web.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- PORTFOLIO -->
+    <section class="projects-section" id="portfolio">
+        <div class="introduction">
+            <h2>NOS PROJETS</h2>
+            <div class="border-title">
+                <div class="border-feature"></div>
+                <div class="border-circle"><i class="fa fa-circle" aria-hidden="true"></i></div>
+                <div class="border-feature"></div>
+            </div>
+            <div class="text-intro">
+                <p>
+                    À l’écoute permanente des nouvelles tendances graphiques, notre pôle création réunit des profils créatifs de différents horizons, tous animés par un but commun : créer des univers graphiques originaux.
+                </p>
+            </div>
+        </div>
+        <div class="projects-buttons">
+            <div class="select-button-left">
+                <!--
+                Pour insérer une zone de saisie dans une ligne, on va utiliser la balise "input".
+                Je définis un groupe de boutons radio, on leur donne le même nom via l'attribut name. Une fois qu'on a formé un groupe de boutons radio, on ne pourra sélectionner qu'une seule des options de ce groupes. -->
+                <input type="radio" name="select" id="select-allworks" checked />
+                <!-- "checked": Cochée par default -->
+                <!-- Le label permet d'identifier une instruction avec un identifiant pour y faire référence plus tard -->
+                <label for="select-allworks" class="left-button">All Works</label>
+            <div class="triangle"></div>
+            </div>
+            <div class="select-button">
+                <input type="radio" name="select" id="select-creative"/>
+                <label for="select-creative">Creative</label>
+                <div class="triangle"></div>
+            </div>
+            <div class="select-button">
+                <input type="radio" name="select" id="select-corporate"/>
+                <label for="select-corporate">Corporate</label>
+                <div class="triangle"></div>
+            </div>
+            <div class="select-button-right">
+                <input type="radio" name="select" id="select-portfolio"/>
+                <label for="select-portfolio">Portfolio</label>
+                <div class="triangle"></div>
+            </div>
+        </div>
+        <div class="projects">
+            <div class="projet">
+                <img src="images/portfolio/glasse.jpg" alt="Projet 1">
+                <div class="overlay">
+                    <a href="images/portfolio/glasse.jpg" target=_blank><span><i class="fa fa-eye" aria-hidden="true"></i></span></a>
+                    <h4>Gros nez</h4>
+                    <p>Grosse lunette.</p>
+                </div>
+            </div>
+            <div class="projet">
+                <img src="images/portfolio/rabbit.jpg" alt="Projet 2">
+                <div class="overlay">
+                    <a href="images/portfolio/rabbit.jpg" target=_blank><span><i class="fa fa-eye" aria-hidden="true"></i></span></a>
+                    <h4>Clown</h4>
+                    <p>Organisation festive.</p>
+                </div>
+            </div>
+            <div class="projet">
+                <img src="images/portfolio/pompadour.jpg" alt="Projet 3">
+                <div class="overlay">
+                    <a href="images/portfolio/pompadour.jpg" target=_blank><span><i class="fa fa-eye" aria-hidden="true"></i></span></a>
+                    <h4>Marque internationale</h4>
+                    <p>Prêt-à-porter.</p>
+                </div>
+            </div>
+            <div class="projet">
+                <img src="images/portfolio/page.jpg" alt="Projet 4">
+                <div class="overlay">
+                    <a href="images/portfolio/page.jpg" target=_blank><span><i class="fa fa-eye" aria-hidden="true"></i></span></a>
+                    <h4>Schema</h4>
+                    <p>Stratégie commerciale.</p>
+                </div>
+            </div>
+            <div class="projet">
+                <img src="images/portfolio/bags.jpg" alt="Projet 5">
+                <div class="overlay">
+                    <a href="images/portfolio/bags.jpg" target=_blank><span><i class="fa fa-eye" aria-hidden="true"></i></span></a>
+                    <h4>E-commerce</h4>
+                    <p>Vente en ligne.</p>
+                </div>
+            </div>
+            <div class="projet">
+                <img src="images/portfolio/city.jpg" alt="Projet 6">
+                <div class="overlay">
+                    <a href="images/portfolio/city.jpg" target=_blank><span><i class="fa fa-eye" aria-hidden="true"></i></span></a>
+                    <h4>Agence matrimoniale</h4>
+                    <p>Voyage en Chine.</p>
+                </div>
+            </div>
+            <div class="projet">
+                <img src="images/portfolio/design.jpg" alt="Projet 7">
+                <div class="overlay">
+                    <a href="images/portfolio/design.jpg" target=_blank><span><i class="fa fa-eye" aria-hidden="true"></i></span></a>
+                    <h4>Designer</h4>
+                    <p>Pyramide.</p>
+                </div>
+            </div>
+            <div class="projet">
+                <img src="images/portfolio/accessory.jpg" alt="Projet 8">
+                <div class="overlay">
+                    <a href="images/portfolio/accessory.jpg" target=_blank><span><i class="fa fa-eye" aria-hidden="true"></i></span></a>
+                    <h4>Accessoires</h4>
+                    <p>Materiel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CONTACT -->
+    <section class="contact-section" id="contact">
+        <div class="contact-contents">
+            <!-- J'intègre ma carte google-maps -->
+            <div class="google-map-bloc">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3936.7260218663882!2d4.832068416174725!3d45.75744729425281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea511baae87b%3A0x5658bece5128d397!2s24+Rue+de+la+Barre%2C+69002+Lyon%2C+France!5e0!3m2!1sfr!2s!4v1525764035326" width="800" height="570" style="border:0" allowfullscreen></iframe>
+            </div>
+            <!-- Le formulaire de contact -->
+            <div class="contact-form">
+                <h3>Contact Info</h3>
+                <!-- Mes coordonées -->
+                <p><em class="text-bold">WebAgency SARL</em><br/>
+                24 Rue de la Barre 69002 Lyon <br/>
+                <span class="text-border">Tel :</span> 04 89 43 09 85
+                </p>
+                <!-- Le formulaire de contact -->
+                <!-- L'attribut "method" indique la façon dont les informations seront envoyées -->
+                <!-- L'attribut "action" indique la page qui va récuperer les données et les enregistrer en backend   -->
+                <form method="post" action="traitement.php" >
+                <!-- Création de zones de texte dans une ligne avec "input -->
+                <input type="text" name="name" placeholder="Name" size="35" class="form-line"><br/>
+                <!-- L'attribut "placeholder" permet de donner un exemple de ce qu'il faut saisir -->
+                <input type="email" name="email" placeholder="Email" size="35" class="form-line" required><br/>
+                <!-- J'agrandis le champ avec "size" -->
+                <input type="text" name="subject" placeholder="Subject" size="35" class="form-line"><br/>
+                <!-- Zone de texte multiligne "textarea"-->
+                <textarea name="message" rows="1" cols="1">Message</textarea><br/>
+                <!-- Le bouton d'envoi "submit" -->
+                <input type="submit" value="Send Message" class="form-button"/>
+                </form>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

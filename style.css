@@ -1,0 +1,564 @@
+/*---------------------*\
+   FONT-FAMILY
+\*---------------------*/
+
+/* Je définis les polices d'écriture à utiliser pour afficher le texte de pages web.*/
+@font-face {
+    font-family: 'robotoregular';
+    src: url('fonts/Roboto-Regular-webfont.eot');
+    src: url('fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Roboto-Regular-webfont.woff') format('woff'),
+    url('fonts/Roboto-Regular-webfont.ttf') format('truetype'),
+    url('fonts/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'robotoblack';
+    src: url('fonts/Roboto-Black-webfont.eot');
+    src: url('fonts/Roboto-Black-webfont.eot?#iefix') format('embedded-opentype'),
+    url('fonts/Roboto-Black-webfont.woff') format('woff'),
+    url('fonts/Roboto-Black-webfont.ttf') format('truetype'),
+    url('fonts/Roboto-Black-webfont.svg#robotoblack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*---------------------*\
+          GENERAL
+\*---------------------*/
+
+body {
+    font-family: robotoregular, arial, sans-serif;
+    font-weight: bold;
+    color: #707478;
+}
+h1 {
+    font-family: robotoblack, arial, sans-serif ;
+    font-size: 2.4em;
+    line-height: 100%;
+}
+h1 + p {
+    margin-top: -5px ;
+    margin-bottom: 35px;
+}
+h1,h2,h3,h4 {
+    font-family: robotoblack, arial, sans-serif ;
+}
+h2 {
+    /* Je centre le titre en le grossissant" */
+    font-size: 3em;
+    text-align: center;
+}
+h3 {
+    font-size: 1.3em;
+}
+h2,h3 {
+    color: black;
+}
+h4 {
+    font-size: 1.1em;
+}
+.color-blue, .fa-circle, .fa-line-chart, .fa-cubes, .fa-pie-chart {
+    color: #5CADD3;
+}
+.slide-contents {
+    color:#ECECEC;
+}
+.border-feature {
+    width: 70px;
+    border-bottom: 1px solid #E6E6E6;
+}
+.introduction {
+    flex-direction: column;
+    align-items: center;
+    margin: 0% 5% 8% 5%;
+    font-size: 1em;
+}
+.border-title {
+    align-items: center;
+    justify-content: space-between;
+    width: 140px;
+    margin-top: -30px;
+}
+/* Je redimensionne le point au-dessous des gros titres */
+.border-circle {
+    font-size: 1.2em;
+}
+/* Je centre le texte au-dessous des titres et je leurs fixe une taille maximale */
+.text-intro {
+    max-width: 580px;
+    text-align: center;
+}
+.introduction, .border-title {
+    display: flex;
+}
+section {
+    padding-top: 100px;
+    padding-bottom: 10%;
+}
+.projects-section {
+    background-color:#F5F5F5;
+}
+.projects, .services-contents {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/*--------------------------*\
+     HEADER NAVIGATION BAR
+\*--------------------------*/
+
+.top-bar {
+    /* Je sort l'élément du flux, il sera toujours visible */
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    /* Avec "z-index" Je spécifie la position d'empilement de l'élément "top-bar" qui sera toujours au dessus des autre éléments" */
+    z-index: 100;
+    display: flex;
+    /* je definis un container flex,*/
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background-color: white;
+    padding: 0% 10% 0% 10%;
+}
+/* Emplacement du logo */
+.logo {
+    /* J'affiche l'élément "logo" en tant qu'élément de bloc. Il commence sur une nouvelle ligne, et prend toute la largeur. */
+    display: block;
+    width: 100%;
+}
+.menu ul {
+   /* Je definis un container flex,*/
+   display: flex;
+   /* Je retire les puces devant la liste */
+   list-style-type: none;
+}
+.menu a {
+    padding: 38px 16px 0px 16px;
+    color: #707478;
+    font-weight: 600;
+    /* Je retire la décoration du texte par default */
+    text-decoration: none;
+}
+/* Mise en place de la barre au dessus des titres menus, suite au passage de la souris */
+.menu a:hover {
+    border-top: 4px solid #5CADD3;
+}
+/* Menu hamburger pour écran smarphone */
+.label {
+    margin: 0 40px 0 20px;
+    font-size: 30px;
+    line-height: 70px;
+    display: none;
+    width: 26px;
+    float: right;
+}
+/* Checkbox clickable */
+#toggle {
+    display: none;
+}
+
+/*---------------------*\
+       HEADER SLIDE
+\*---------------------*/
+
+.image-slide {
+    position: relative;
+
+    /* fonctions d'animation. */
+    -moz-animation: animation-slide-l 10s;
+    -webkit-animation: animation-slide-l 10s;
+    animation: animation-slide-l 10s;
+    -moz-animation-iteration-count:infinite;
+    -webkit-animation-iteration-count:infinite;
+    animation-iteration-count:infinite; /* Nombre de boucle */
+    -moz-animation-direction:alternate;
+    -webkit-animation-direction:alternate;
+    animation-direction:alternate; /* sens de lecture */
+}
+/* Grâce au pseudo-classe "target" je peux révéler/masquer une images suite au clic sur la flèche.*/
+#slide-1:target .image-slide {
+    left: 0%;
+}
+#slide-2:target .image-slide {
+    /* animation manuelle */
+    left: -50%;
+    -moz-animation: animation-slide-ll;
+    -webkit-animation: animation-slide-ll;
+    animation: animation-slide-ll;
+}
+.slider {
+    /* Je dispose l'éléments comme s'il n'était pas positionné puis ajuste la position de l'élément, sans modifier la présentation (et laisse ainsi un espace où l'élément aurait du être s'il n'avait pas été positionné). */
+    position: relative;
+    width: 100%;
+    height: auto;
+    /* on cache ce qui déborde */
+    overflow: hidden;
+    padding-top: 100px;
+    margin-bottom: 10%;
+}
+#slide-1 {
+    width:200%;
+}
+#slide-1, #slide-2 {
+  padding-top: 100px;
+  margin-top: -100px;
+}
+.slider img, .slide-contents {
+    width: 100%;
+}
+.slide-contents {
+    /* Je sors l'élément "slide-contents" du flux et je le place où je veux dans l'élément parent positionné */
+    position: absolute;
+    top: 95px; /* Je le positionne précisément */
+    bottom: 4px;
+    left:0px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.slide-text {
+    width: 40%;
+    margin-left: -38%;
+    margin-top: -3%;
+}
+.left-slide-arrow, .right-slide-arrow {
+    background-color: rgba(0, 0, 0,0.2);
+    font-size: 2.5em;
+    color:#ECECEC
+}
+/* L'effet en demi-cercle sur la flèche gauche du slider.*/
+.left-slide-arrow {
+    border-radius: 0px 50px 50px 0px;
+    padding:13px 16px 13px 8px;
+}
+/* L'effet en demi-cercle sur la flèche droite du slider. */
+.right-slide-arrow {
+    border-radius: 50px 0px 0px 50px;
+    padding:13px 8px 13px 16px;
+}
+
+/*-------------------------*\
+    @KEYFRAMES ANIMATIONS
+\*-------------------------*/
+
+/* Je définis les étapes qui composent la séquence de mes animations */
+@-webkit-keyframes animation-slide-l {
+    0%      {left:0%;} /*1ère image*/
+    40%     {left:0%;} /*idem pour attente*/
+    55%     {left:-50%;} /*2ème image*/
+    100%     {left:-50%;} /*idem pour attente*/
+}
+@-moz-keyframes animation-slide-l {
+    0%      {left:0%;}
+    40%     {left:0%;}
+    55%     {left:-50%;}
+    100%     {left:-50%;}
+}
+@keyframes animation-slide-l {
+    0%      {left:0%;}
+    40%     {left:0%;}
+    55%     {left:-50%;}
+    100%     {left:-50%;}
+}
+@-webkit-keyframes animation-slide-ll {
+    0%      {left:0%;} /*1ère image*/
+    40%     {left:0%;} /*idem pour attente*/
+    55%     {left:-50%;} /*2ème image*/
+    100%     {left:-50%;} /*idem pour attente*/
+}
+@-moz-keyframes animation-slide-ll {
+    0%      {left:0%;}
+    40%     {left:0%;}
+    55%     {left:-50%;}
+    100%     {left:-50%;}
+}
+@keyframes animation-slide-ll {
+    0%      {left:0%;}
+    40%     {left:0%;}
+    55%     {left:-50%;}
+    100%     {left:-50%;}
+}
+
+/*---------------------*\
+       BUTTON STYLE
+\*---------------------*/
+
+.slide-button, .form-button {
+    background-color: #5CADD3;
+    border-bottom: 4px solid #4696BD;
+    border-radius: 3px;
+    padding: 9px 17px 9px 17px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-align: center;
+}
+.slide-button:hover, .form-button:hover {
+    box-shadow: 3px 3px 4px #2D2D2D;
+}
+.slide-button:active, .form-button:active {
+    box-shadow: 1px 1px 2px #2D2D2D;
+}
+.slide-button {
+    font-size: 1.2em;
+}
+.form-button
+{
+    border-top-style: none;
+    border-left-style: none;
+    border-right-style: none;
+    font-size: 1em;
+}
+
+/*---------------------*\
+    SECTION SERVICES
+\*---------------------*/
+
+.services-contents,.services-descriptive,.services-category {
+    /* Ce type d'affichage permet aux éléments de se comporter comme des éléments de bloc et disposeront son contenu selon le modèle de boîte flexible. */
+    display: flex;
+}
+.services-image {
+    max-width: 510px;
+    position: relative;
+    top: -53px;
+}
+.services-image img {
+    width: 100%;
+    height: auto;
+}
+.services-descriptive {
+    /* Je positionne les 3 paragraphes en colonne. */
+    flex-direction: column;
+    max-width: 545px;
+    margin-right: 4%;
+}
+.services-text {
+    /* Je positionne les paragraphes */
+    max-width: 500px;
+    padding-left: 20px;
+    line-height: 150%;
+    /* Les bords gauche et droit du texte sont alignés avec les bord gauche et droit du paragraphe */
+    text-align: justify;
+}
+.services-icons {
+    /* J'applique une bordure aux icones */
+    border: 2px solid #E6E6E6;
+    /* Je transforme le carré en cercle. */
+    border-radius: 50px;
+    font-size: 2em;
+}
+.fa-line-chart {
+    padding: 13px 13px 13px 13px;
+}
+.fa-cubes {
+    padding: 13px 9px 13px 13px;
+}
+.fa-pie-chart {
+    padding: 14px 14px 12px 16px;
+}
+.services-circle {
+    /* Je rapproche les points du cercle. */
+    margin-left: -7px;
+    font-size: 1em;
+}
+.services-category {
+    /* Je centre les icones: les éléments sont regroupés au centre */
+    align-items: center;
+}
+
+/*-----------------------------------*\
+     SECTION PORTFOLIO / NAVIGATION
+\*-----------------------------------*/
+
+.projects-buttons,.select-button, .select-button-left, .select-button-right {
+    display: flex;
+}
+.projects-buttons {
+    /* Éléments groupés au centre par rapport à l'axe principal. Je distibue l'espace qui reste */
+    justify-content: center;
+    /* J'applique un margin  négatif afin de rapprocher précisement la classe "projects-buttons" de la classe "introduction(Nos projets)"*/
+    margin-top: -6%;
+    margin-bottom: 2%;
+}
+.select-button, .select-button-left, .select-button-right {
+    /* J'empille les éléments */
+    flex-direction: column;
+    /* Je centre les éléments par rapport à l'axe transversal (les flèches ce retrouve au centre de chaque bouton)*/
+    align-items: center;
+    /* Je definis l'epaisseur du gras*/
+    font-weight: bold;
+}
+.select-button input, .select-button-left input, .select-button-right input {
+   /* Je cache tout les "input" */
+   display: none;
+}
+.select-button label,.select-button-left label,.select-button-right label {
+    /* Je passe d'une structure inligne à une structure block afin de pouvoir donner une dimension au "label" */
+    display: block;
+    width: 90px;
+    height: 30px;
+    background-color: #E6E6E6;
+    padding-top: 12px;
+
+    /* Je centre les libellés */
+    text-align: center;
+}
+/* J'arrondis l'angle  gauche */
+.select-button-left label {
+    border-radius: 5px 0px 0px 5px;
+}
+/* J'arrondis l'angle droit */
+.select-button-right label {
+    border-radius: 0px 5px 5px 0px;
+}
+/* Cette pseudo-classe "input:checked" ne ciblera q'un élément d'interface utilisateur que s'il a été coché (checked).*/
+/* J'applique une mise en forme spécifique quand un utilisateur survole un élément grâce à la pseudo-classe ":hover" */
+.projects-buttons input:checked+label, .projects-buttons label:hover {
+    background-color: #5CADD3;
+    border-bottom: 2px solid #4696BD;
+    color: #FFFFFF;
+    /* Je fais apparaitre une main quand la zone concerné est survolée par la souris */
+   /* cursor: pointer;*/
+}
+.projects-buttons input:checked+label+.triangle {
+    /* Je positionne et stylise les petits triangles qui appraitront l'un aprés l'autre aprés qu'il soit "coché" */
+    height : 0;
+    width : 0;
+    border-top : 6px solid #4696BD;
+    border-right : 6px solid transparent;
+    border-left : 6px solid transparent;
+}
+
+/*----------------------------*\
+   SECTION PORTFOLIO / IMAGES
+\*----------------------------*/
+
+.projects {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    /* Éléments groupés au centre par rapport à l'axe principal. Je distibue l'espace qui reste */
+    justify-content: center;
+}
+.projet {
+    position: relative;
+    width: 23%;
+    margin: 0.5%;
+}
+.projet img {
+    /* Je passe d'un élément de type en-ligne en rendu de type bloc afin de pouvoir les redimensionner comme je le désire */
+    display: block;
+    max-width: 100%;
+}
+.projet h4 {
+    /* Je redimensionne les marges exterieurs des 4 cotés */
+    margin: 3% 3% 0% 4%;
+}
+.projet p {
+    /* Epaisseur du gras */
+    font-weight: 400;
+    margin: 0% 2% 3% 4%;
+}
+/* J'utilise pour l'activation un lien au survol avec la pseudo-class ":hover" */
+.projet:hover .overlay {
+    opacity: 1; /* Visible*/
+    /* Je précise les propriétés CSS à transformer */
+    transition: opacity;
+    /* Je précise la fonction de transition à utiliser, le modèle d'interpolation.
+    Pour ma part j'ai utilisé "ease" qui est rapide sur le début et ralenti sur la fin */
+    transition-timing-function: ease;
+    color: white;
+}
+.projet .overlay {
+    position: absolute;
+    /* Complètement transparent (invisible) */
+    opacity: 0;
+    width: 100%;
+    bottom: 0;
+   /* padding: 0.8%;*/
+    background-color: rgba(0, 0, 0, .5);
+}
+.projet .overlay span {
+    /* J'extrait l'élément du flux afin de les positionner par rapport à l'élément parent */
+    position: absolute;
+    /* Je positione les yeux (icones) */
+    right: 8px;
+    top: -20px;
+    /* Je lui donne une couleur */
+    background-color: #5CADD3;
+    /* Une bordure blanche continue */
+    border: 2px solid #E6E6E6;
+    /* Je lui donne une forme en cercle */
+    border-radius: 50px;
+    /* Je redimensionne les 4 cotés */
+    padding: 8px 11px 9px 11px;
+}
+
+/*---------------------*\
+      SECTION CONTACT
+\*---------------------*/
+
+.contact-contents {
+    /* Je positionne le conteneur "contact-form" en relative afin que l'élément fils(contact-form ) ce positionne par rapport à lui */
+    position: relative;
+}
+.google-map-bloc {
+    /* Couleur de fond  de la carte */
+    background-color:#4696BD;
+    /* Même hauteur que la carte afin de superposer exactement la couleur de fond */
+    height: 570px;
+}
+.contact-contents iframe {
+    opacity: 0.7;
+}
+.contact-contents iframe, .form-line, .contact-form textarea {
+    /* J'impose à la carte et le formulaire de prendre toute la largeur du viewport */
+    width: 100%;
+}
+.contact-form {
+    /* Je sort l'élément "contact-form" du flux et je le positionne par rapport à l'élément parent positionné (contact-contents) */
+    position: absolute;
+    top: 48px;
+    right: 15%;
+    width: 310px;
+    background-color: rgba(255,255,255,0.7);
+    /* Je positionne les marges intérieures du formulaire */
+    padding: 1px 25px 20px 20px;
+}
+/* Je stylise les champs du formulaire */
+.form-line, .contact-form textarea {
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    margin-bottom: 14px;
+    padding-left: 10px;
+}
+.form-line {
+    /* Je grossis les champs de texte. */
+    height: 22px;
+}
+.contact-form textarea {
+    /* Les caractéristiques de la zone de texte "Texarea" */
+    width: 309px;
+    height: 105px;
+    padding-top: 10px;
+    font-family: robotoregular, arial;
+    font-size: 1em;
+    color: #707478;
+}
+.contact-section {
+    /* Je laisse un espace de 2% en bas de la page */
+    padding-bottom: 2%;
+}
+
+
+
+
+
+
+

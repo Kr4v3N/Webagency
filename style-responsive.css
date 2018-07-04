@@ -1,0 +1,233 @@
+
+/*----------------------------*\
+   ECRAN AU-DESSOUS DE 1439px
+\*----------------------------*/
+
+/* all = Pour tout type de device / media */
+@media all and (max-width: 1439px) {
+    /*-----section Formulaire de contact----*/
+    .contact-contents {
+        display: flex;
+    }
+    .google-map-bloc, iframe {
+        /* Je place les 2 éléments côte à côte */
+        width: 65%;
+        height: 531px;
+        /* je creer un espace entre les 2 éléments */
+        margin-right: 1%;
+    }
+     .contact-form textarea {
+        /* Je redimensionne la "textarea" */
+        width: 100%;
+    }
+    .contact-form {
+        position: relative;
+        top: 0;
+        right: 0;
+        width: 47%;
+        height: 510px;
+        background-color:#F5F5F5;
+    }
+}
+
+/*----------------------------*\
+   ECRAN AU-DESSOUS DE 1235px
+\*----------------------------*/
+
+@media all and (max-width: 1235px)
+{
+    .projet {
+        position: relative;
+        width: 20%;
+    }
+ }
+
+/*----------------------------*\
+   ECRAN AU-DESSOUS DE 990px
+\*----------------------------*/
+
+@media all and (max-width: 990px) {
+    /*-----Header Slide-----*/
+    .slider {
+        margin-bottom: -25%;
+    }
+    .slide-contents {
+        position: relative;
+        color:#272727;
+    }
+    .slide-text {
+        /* Je sort le texte du slider pour le placer en dessous */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        height:450px;
+        margin: auto;
+        text-align: center;
+    }
+    .slide-text h1, .slide-text p {
+        width: 100%;
+    }
+    .left-slide-arrow, .right-slide-arrow {
+       /* Je cache les 2 flèches pour le défilement manuel des sliders */
+       display: none;
+    }
+    /*------Section general-----*/
+    .text-intro {
+         /* Je fixe au paragraphe une taille maximale de 80% */
+        width: 80%;
+    }
+    /*-------Section Services----------*/
+    .services-contents {
+        flex-direction: column;
+      /*margin: auto;*/
+        padding: 0% 10% 10% 10%;
+        align-items: center;
+    }
+    .images-group {
+        flex-direction: column;
+    }
+}
+
+/*----------------------------*\
+   ECRAN AU-DESSOUS DE 765px
+\*----------------------------*/
+
+@media all and (max-width: 765px) {
+    /*------Header navigation-bar-----*/
+    body {
+         font-size: 0.5em;
+    }
+    .top-bar {
+        padding: 0% 2% 0% 3%;
+    }
+    .menu ul {
+        font-size: 1.6em;
+        flex-direction: column;
+        text-align: right;
+    }
+    .menu a {
+        padding: 0px 0px 0px 0px;
+    }
+    .menu a:hover {
+        border-top: none;
+        color: #4696BD;
+    }
+    .services-contents {
+         margin-top: 50px;
+    }
+    .services-descriptive {
+         margin-top: -50px;
+     }
+    .introduction {
+         margin-top: -50px;
+    }
+    .google-map-bloc {
+         display: none;
+    }
+    .contact-form textarea {
+        /* Je redimensionne la "textarea" */
+        width: 100%;
+    }
+    .contact-form {
+        position: relative;
+        top: -50px;
+        width: 100%;
+        height: 410px;
+        background-color:#F5F5F5;
+    }
+    /* Je redimensionne le point au-dessous du titre "NOS SERVICES" et je le repositionne */
+    .border-circle {
+        margin: 10px 75px;
+        font-size: 1em;
+    }
+    .projects-section {
+     margin-top: 10px;
+    }
+}
+
+/*----------------------------*\
+   ECRAN AU-DESSOUS DE 514px
+\*----------------------------*/
+
+@media all and (max-width: 514px) {
+    .select-button label,.select-button-left label,.select-button-right label {
+        display: block;
+        width: 100px;
+        font-size: 1.4em;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .projects-buttons input:checked+label+.triangle {
+         display: none;
+    }
+    .projet {
+        width: 100%;
+    }
+    .contact-form textarea {
+        height: 150px;
+        font-size: 1.5em;
+    }
+    .contact-form  p {
+         font-size: 1.3em;
+    }
+    .label {
+        /* Je fais apparaitre le menu hamburger*/
+        display: block;
+        /* Je fais apparaitre une main au passage de la souris sur l'élément */
+        cursor: pointer;
+    }
+    .label:hover {
+        background-color: #5CADD3;
+        opacity: 0.2;
+        width: 45px;
+        height: 45px;
+    }
+    .menu {
+        color: black;
+        background-color: gray;
+        text-align: center;
+        width: 250px;
+        display: none;
+    }
+    .menu ul {
+        display: block;
+        border-bottom: 1px solid #EAEAEB;
+        margin: 0;
+    }
+    .menu ul a {
+        color: black;
+    }
+    #toggle:checked + .menu {
+        display: block;
+    }
+}
+
+/*----------------------------*\
+   ECRAN AU-DESSOUS DE 414px
+\*----------------------------*/
+
+@media all and (max-width: 414px) {
+    header  img {
+    /* Je force l'image à être soit plus petites que son conteneur soit de la même largeur.*/
+    max-width: 100%;
+    }
+    .select-button label,.select-button-left label,.select-button-right label {
+        display: block;
+        width: 60px;
+        font-size: 1.3em;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .projects {
+         flex-direction: column;
+         margin-left: 10%;
+    }
+    .projet {
+        width: 90%;
+    }
+}
